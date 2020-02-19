@@ -3,8 +3,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t harvinderg/docker-react -f Dockerfile.dev . 
+    - docker build -t harvinderg/docker-react -f Docker.dev . 
 
 script:
     - docker run harvinderg/docker-react npm run test -- --coverage
-    
